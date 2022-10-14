@@ -19,14 +19,16 @@ export default function Home({ exploreData }) {
         <section className="pt-6">
           <h2 className="text-4xl font-semibold pb-5">Explore Nearby</h2>
           {/* Pull some data fro a server -API end points */}
-          {exploreData?.map(({img, distance, location}) => (
-            <SmallCard
-              key={img}
-              img={img}
-              distance={distance}
-              location={location}
-            />
-          ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {exploreData?.map(({ img, distance, location }) => (
+              <SmallCard
+                key={img}
+                img={img}
+                distance={distance}
+                location={location}
+              />
+            ))}
+          </div>
         </section>
       </main>
     </div>
