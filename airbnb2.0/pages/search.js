@@ -3,19 +3,23 @@ import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { format } from "date-fns";
+import InfoCard from "../components/InfoCard";
 
-function Search() {
+function Search({ searchResults }) {
   const router = useRouter();
-  const { location, startDate, endDate, numberOfGuests } = router.query;
-  
-  const formattedStartDate = format(new Date(startDate), "dd MMMM yy")
-  const formattedEndDate = format(new Date(endDate), "dd MMMM yy")
-  const range = `${formattedStartDate} - ${formattedEndDate}`
 
+  console.log(searchResults);
+
+  const { location, startDate, endDate, numberOfGuests } = router.query;
+  const formattedStartDate = format(new Date(startDate), "dd MMMM yy");
+  const formattedEndDate = format(new Date(endDate), "dd MMMM yy");
+  const range = `${formattedStartDate} - ${formattedEndDate}`;
 
   return (
     <div className="h-screen">
-      <Header placeholder = {`${location} | ${range} | ${numberOfGuests} guests`}/>
+      <Header
+        placeholder={`${location} | ${range} | ${numberOfGuests} guests`}
+      />
       <main className="flex">
         <section className="flex-grow pt-14 px-6">
           <p className="text-xs">
@@ -31,6 +35,22 @@ function Search() {
             <p className="button">Rooms and Beds</p>
             <p className="button">More filters</p>
           </div>
+          <div className="flex flex-col ">
+            {searchResults.map(
+              ({ img, location, title, description, star, price, total }) => (
+                <InfoCard
+                  key={img}
+                  img={img}
+                  location={location}
+                  title={title}
+                  description={description}
+                  star={star}
+                  price={price}
+                  total={total}
+                />
+              )
+            )}
+          </div>
         </section>
       </main>
       <Footer />
@@ -39,3 +59,15 @@ function Search() {
 }
 
 export default Search;
+
+export async function getServerSideProps() {
+  const searchResults = await fetch("https://www.jsonkeeper.com/b/5NPS").then(
+    (res) => res.json()
+  );
+
+  return {
+    props: {
+      searchResults,
+    },
+  };
+}
