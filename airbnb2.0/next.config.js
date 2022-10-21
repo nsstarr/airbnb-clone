@@ -11,6 +11,10 @@ const nextConfig = {
       "www.ephotozine.com",
     ], // <== Domain name
   },
+  env: {
+    mapbox_key:
+      "pk.eyJ1IjoibnNzdGFyciIsImEiOiJjbDlpa2FtaWYxbjM3M3dsOW51ZHdyMXh1In0.ztew08twWxbqBvoGxuTanA",
+  },
 };
 
 module.exports = nextConfig;
