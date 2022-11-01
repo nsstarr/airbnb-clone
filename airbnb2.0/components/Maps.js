@@ -9,12 +9,13 @@ function Maps() {
       zoom: 11,
     });
     return (
-    <Map
-      mapStyle="mapbox://styles/nsstarr/cl9ilseru00d315ogvimvdsig"
-      mapboxApiAccessToken={process.env.mapbox_key}
-      {...viewport}
-    ></Map>
-  );
+      <Map
+        mapStyle="mapbox://styles/nsstarr/cl9ilseru00d315ogvimvdsig"
+        mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_GL_ACCESS_TOKEN}
+        // mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_GL_ACCESS_TOKEN}
+        {...viewport}
+      ></Map>
+    );
 }
 
 export default Map;

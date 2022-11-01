@@ -47,7 +47,6 @@ function Header({placeholder}) {
     })
   }
 
-  console.log(searchInput);
   return (
     <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md py-5 px-5 md:px-10">
       {/* left */}

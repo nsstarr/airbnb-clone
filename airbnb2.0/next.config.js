@@ -1,5 +1,4 @@
 
-
 const nextConfig = {
   reactStrictMode: true,
   images: {
@@ -12,8 +11,7 @@ const nextConfig = {
     ], // <== Domain name
   },
   env: {
-    mapbox_key:
-      "pk.eyJ1IjoibnNzdGFyciIsImEiOiJjbDlpa2FtaWYxbjM3M3dsOW51ZHdyMXh1In0.ztew08twWxbqBvoGxuTanA",
+    NEXT_PUBLIC_MAPBOX_GL_ACCESS_TOKEN: process.env.NEXT_PUBLIC_MAPBOX_GL_ACCESS_TOKEN,
   },
 };
 
