@@ -42,7 +42,8 @@ export default function Home({ exploreData, cardsData }) {
           </div>
         </section>
         <LargeCard
-          img="https://links.papareact.com/4cj"
+          // img="https://links.papareact.com/4cj"
+          img="https://cdn.dribbble.com/users/2439896/screenshots/8672422/media/85ee592e47e7a3dcfbd8601fa0e8bf98.jpg"
           title="The Greatest Outdoors"
           description="Wishlists curated by Airbnb"
           buttonText="Get Inspired"

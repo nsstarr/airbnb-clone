@@ -1,4 +1,3 @@
-
 const nextConfig = {
   reactStrictMode: true,
   images: {
@@ -8,10 +7,13 @@ const nextConfig = {
       "i.pinimg.com",
       "www.pinterest.co.uk",
       "www.ephotozine.com",
+      "parade.com",
+      "cdn.dribbble.com",
+      "media.geeksforgeeks.org",
     ], // <== Domain name
   },
   env: {
-    NEXT_PUBLIC_MAPBOX_GL_ACCESS_TOKEN: process.env.NEXT_PUBLIC_MAPBOX_GL_ACCESS_TOKEN,
+    NEXT_PUBLIC_MAPBOX_API_TOKEN: process.env.NEXT_PUBLIC_MAPBOX_API_TOKEN,
   },
 };
 

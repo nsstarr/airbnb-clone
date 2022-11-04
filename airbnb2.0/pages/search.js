@@ -53,9 +53,10 @@ function Search({ searchResults }) {
             )}
           </div>
         </section>
-        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+        {/* Temporarily removed the map as Mapbox tiles are now billable. */}
+        {/* <section className="hidden xl:inline-flex xl:min-w-[600px]">
           <Maps />
-        </section>
+        </section> */}
       </main>
       <Footer />
     </div>

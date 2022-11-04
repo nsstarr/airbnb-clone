@@ -11,7 +11,7 @@ function Maps() {
     return (
       <Map
         mapStyle="mapbox://styles/nsstarr/cl9ilseru00d315ogvimvdsig"
-        mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_GL_ACCESS_TOKEN}
+        mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_API_TOKEN}
         // mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_GL_ACCESS_TOKEN}
         {...viewport}
       ></Map>
