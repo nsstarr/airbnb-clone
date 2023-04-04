@@ -11,7 +11,7 @@ function Maps() {
     return (
       <Map
         mapStyle="mapbox://styles/anastasia-dev/clg2happj001j01p4ibzrc6ue"
-        mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_API_TOKEN}
+        // mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_API_TOKEN}
         {...viewport}
       ></Map>
     );
