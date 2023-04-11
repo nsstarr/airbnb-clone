@@ -1,20 +1,16 @@
-import Map from "react-map-gl";
+import "leaflet/dist/leaflet.css"
+import { MapContainer, TileLayer } from "react-leaflet";
 
 function Maps() {
-    const [viewport, setViewPort] = useState({
-      width: "100%",
-      height: "100%",
-      longitude: -100,
-      latitude: 40,
-      zoom: 11,
-    });
     return (
-      <Map
-        mapStyle="mapbox://styles/anastasia-dev/clg2happj001j01p4ibzrc6ue"
-        // mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_API_TOKEN}
-        {...viewport}
-      ></Map>
+      <MapContainer className="h-[100vh] w-[100vh]" center={[51.5007, 0.1246]} zoom={13} scrollWheelZoom={true
+      }>
+      <TileLayer
+        attribution='&amp;copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      </MapContainer>
     );
 }
 
-export default Map;
+export default Maps;

@@ -4,11 +4,16 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
-import Maps from '../components/Maps'
+import dynamic from "next/dynamic";
+import "leaflet/dist/leaflet.css"
+
+const Map = dynamic(() => import("../components/Maps.js"), {
+  ssr: false,
+});
 
 function Search({ searchResults }) {
-  const router = useRouter();
 
+  const router = useRouter();
   console.log(searchResults);
 
   const { location, startDate, endDate, numberOfGuests } = router.query;
@@ -54,7 +59,7 @@ function Search({ searchResults }) {
           </div>
         </section>
         <section className="hidden xl:inline-flex xl:min-w-[600px]">
-          <Maps />
+          <Map/>
         </section>
       </main>
       <Footer />
