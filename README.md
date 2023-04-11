@@ -48,5 +48,6 @@ npm run dev
 If you encounter any issues while using this project, please feel free to open an issue on the repository page. We welcome contributions from developers of all skill levels, and we're always looking for ways to improve the codebase and make it more accessible to others.
 
 ## License
+Airbnb-clone is licensed under the MIT License. You are free to use, modify, and distribute the app as you see fit, as long as you include the original license and attribution to the original authors.
 
 [MIT](https://choosealicense.com/licenses/mit/)
